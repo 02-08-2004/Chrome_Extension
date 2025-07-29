@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Unread Checker",
+  "description": "Check unread emails and click to open them",
+  "version": "1.0",
+  "permissions": [
+    "identity",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "oauth2": {
+    "client_id": "29562679729-h848vgj0vsa2ckkighofmf43kr3vofff.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/gmail.readonly"]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  
+  "host_permissions": [
+    "https://mail.google.com/",
+    "https://www.googleapis.com/"
+  ]
+}
